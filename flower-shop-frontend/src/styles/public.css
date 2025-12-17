@@ -1,0 +1,360 @@
+/* Глобальні стилі для публічної частини */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* оболонка публічного сайту (PublicLayout) */
+.public-shell {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #111827 0, #020617 55%);
+  color: #111827; /* темний текст */
+}
+
+/* основний контейнер контенту */
+.public-main {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.public-content {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* шапка публічного сайту (за бажанням) */
+.public-topbar {
+  height: 56px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 23, 42, 0.96);
+  border-bottom: 1px solid #1f2937;
+  color: #f9fafb;
+}
+
+.public-logo {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-size: 18px;
+}
+
+.public-logo span {
+  color: #facc15;
+}
+
+.public-nav {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.public-nav a,
+.public-actions .public-link {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.public-nav a:hover,
+.public-actions .public-link:hover {
+  color: #ffffff;
+}
+
+.public-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* картка профілю / будь-яка біла картка */
+
+.profile-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 20px 24px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  color: #111827; /* гарантовано темний текст усередині */
+}
+
+.profile-title {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.profile-section {
+  margin-top: 16px;
+}
+
+.profile-section h2 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.profile-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.profile-links li + li {
+  margin-top: 4px;
+}
+
+.profile-links a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.profile-links a:hover {
+  text-decoration: underline;
+}
+
+.profile-back {
+  margin-top: 20px;
+}
+
+.profile-back a {
+  font-size: 14px;
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.profile-back a:hover {
+  color: #111827;
+}
+
+/* таблиці в особистому кабінеті */
+
+.public-table-wrapper {
+  margin-top: 12px;
+  overflow: auto;
+}
+
+.public-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: #111827; /* текст у таблиці темний */
+}
+
+.public-table th,
+.public-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.public-table th {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+}
+
+.public-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.notif-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.notif-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+.notif-item-read {
+  background: #f9fafb;
+}
+
+.notif-date {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.order-form {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.order-input {
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.order-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #bfdbfe;
+}
+
+.order-extra-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.order-extra-item {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.order-error {
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.order-success {
+  color: #16a34a;
+  font-size: 14px;
+}
+
+/* використовуємо вже існуючу .btn-primary з public/admin теми або додай тут */
+
+
+.auth-card {
+  max-width: 360px;
+  margin: 40px auto 0;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 24px 24px 20px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+  color: #111827;
+}
+
+.auth-title {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.auth-bottom-text {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.auth-bottom-text a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.auth-bottom-text a:hover {
+  text-decoration: underline;
+}
+
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.catalog-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.catalog-subtitle {
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+.catalog-filter span {
+  margin-right: 8px;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.catalog-grid {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.bouquet-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 16px 18px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  color: #111827;
+}
+
+.bouquet-title {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.bouquet-meta {
+  margin: 0 0 4px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.bouquet-price {
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+
+.public-logout {
+  border-radius: 999px;
+  border: 1px solid #fca5a5;
+  padding: 4px 12px;
+  font-size: 13px;
+  background: transparent;
+  color: #fecaca;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.public-logout:hover {
+  background: rgba(248, 113, 113, 0.18);
+  border-color: #fecaca;
+}
